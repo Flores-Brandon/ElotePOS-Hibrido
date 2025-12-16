@@ -1,0 +1,104 @@
+/* Contenedor Principal */
+.dashboard-container {
+  padding: 2rem;
+  background-color: #f4f6f9; /* Gris muy clarito de fondo */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+.dashboard-header h1 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+}
+.dashboard-header p {
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+}
+
+/* Estilos generales de las Tarjetas (Cards) */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  border: 1px solid #e1e4e8;
+}
+
+/* Grid para las tarjetas de arriba (KPIs) */
+.kpi-grid {
+  display: grid;
+  /* Esto hace que sean responsivas automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card h3 {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.kpi-card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.trend {
+  font-size: 0.85rem;
+  color: #95a5a6;
+}
+.trend.positive {
+  color: #27ae60; /* Verde para cosas positivas */
+  font-weight: 600;
+}
+
+/* Grid para las gráficas */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.chart-card {
+  min-height: 350px; /* Altura mínima para que se vea bien */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header h2 {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 0.5rem;
+}
+
+/* Placeholder temporal (el recuadro gris donde irá la gráfica) */
+.chart-placeholder {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  border: 2px dashed #d1d8e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aab7c4;
+  font-weight: 500;
+}
+
+/* ESTO ES LO NUEVO: */
+.contenedor-canvas {
+  position: relative;
+  height: 400px; /* Altura fija obligatoria */
+  width: 100%;
+  display: block;
+}
